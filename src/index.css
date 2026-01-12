@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/500.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+
+/* Romantic Birthday App Design System */
+
+@layer base {
+  :root {
+    /* Romantic color palette */
+    --background: 350 100% 98%;
+    --foreground: 350 30% 20%;
+
+    --card: 350 60% 97%;
+    --card-foreground: 350 30% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 350 30% 20%;
+
+    /* Rose/Blush Pink - Primary */
+    --primary: 350 80% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft Cream - Secondary */
+    --secondary: 35 60% 95%;
+    --secondary-foreground: 350 30% 25%;
+
+    /* Muted blush */
+    --muted: 350 30% 92%;
+    --muted-foreground: 350 20% 45%;
+
+    /* Rose Gold Accent */
+    --accent: 15 60% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Deep Rose for emphasis */
+    --destructive: 350 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 350 30% 88%;
+    --input: 350 30% 88%;
+    --ring: 350 80% 65%;
+
+    --radius: 1rem;
+
+    /* Romantic extras */
+    --rose-light: 350 100% 95%;
+    --rose-medium: 350 80% 75%;
+    --rose-deep: 350 70% 50%;
+    --gold: 45 90% 65%;
+    --gold-soft: 40 70% 85%;
+    --blush: 10 60% 90%;
+    --cream: 40 50% 96%;
+    --lavender: 280 40% 90%;
+
+    /* Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(350 100% 95%) 0%, hsl(350 60% 92%) 50%, hsl(280 40% 94%) 100%);
+    --gradient-heart: linear-gradient(135deg, hsl(350 80% 65%) 0%, hsl(350 70% 55%) 100%);
+    --gradient-glow: radial-gradient(circle, hsl(350 80% 75% / 0.4) 0%, transparent 70%);
+    --gradient-sunset: linear-gradient(180deg, hsl(350 60% 92%) 0%, hsl(35 60% 95%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(350 80% 65% / 0.15);
+    --shadow-glow: 0 0 30px hsl(350 80% 65% / 0.3);
+    --shadow-heart: 0 8px 32px hsl(350 70% 55% / 0.35);
+
+    /* Fonts */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Cormorant Garamond', serif;
+  }
+
+  .dark {
+    --background: 350 30% 8%;
+    --foreground: 350 20% 95%;
+
+    --card: 350 25% 12%;
+    --card-foreground: 350 20% 95%;
+
+    --popover: 350 25% 10%;
+    --popover-foreground: 350 20% 95%;
+
+    --primary: 350 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 20% 18%;
+    --secondary-foreground: 350 20% 90%;
+
+    --muted: 350 20% 15%;
+    --muted-foreground: 350 15% 60%;
+
+    --accent: 15 50% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 350 80% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 350 20% 20%;
+    --input: 350 20% 20%;
+    --ring: 350 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-gradient-romantic {
+    background: linear-gradient(135deg, hsl(350 80% 55%) 0%, hsl(350 70% 45%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-romantic {
+    background: var(--gradient-romantic);
+  }
+
+  .bg-heart {
+    background: var(--gradient-heart);
+  }
+
+  .shadow-romantic {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-heart {
+    box-shadow: var(--shadow-heart);
+  }
+
+  .glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+
+  .float-gentle {
+    animation: floatGentle 3s ease-in-out infinite;
+  }
+
+  .sparkle {
+    animation: sparkle 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(350 80% 65% / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(350 80% 65% / 0.6);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
