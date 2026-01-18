@@ -22,7 +22,7 @@ I hope this year brings you everything your heart desires — success in your dr
 
 You are not just my girlfriend — you are my best friend, my inspiration, and my favorite forever.
 
-Happy Birthday, my love. Today, tomorrow, and always — it's you. 💕`;
+Happy Birthday, my love, my little. Today, tomorrow, and always — it's you. 💕`;
 
 export const BirthdayScreen = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -112,7 +112,7 @@ export const BirthdayScreen = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            My Love ❤️
+            My Love ( My Baby Girl )❤️
           </motion.h2>
 
           <motion.p
