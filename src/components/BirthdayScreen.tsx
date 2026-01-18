@@ -20,7 +20,7 @@ Thank you for being patient with me, for believing in me, and for loving me in w
 
 I hope this year brings you everything your heart desires — success in your dreams, peace in your soul, and countless reasons to smile. And through it all, I promise to stand beside you, cheering you on, loving you more with every passing day.
 
-You are not just my girlfriend — you are my best friend, my inspiration, and my favorite forever.
+You are not just my girlfriend — you are my best friend, my inspiration, my wife and my favorite forever.
 
 Happy Birthday, my love, my little. Today, tomorrow, and always — it's you. 💕`;
 
@@ -112,7 +112,7 @@ export const BirthdayScreen = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            My Love ( My Baby Girl )❤️
+            My Love <br/>( My Baby Girl )<br/>❤️
           </motion.h2>
 
           <motion.p
